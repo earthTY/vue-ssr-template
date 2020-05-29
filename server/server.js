@@ -22,6 +22,14 @@ if(isDev){
 
 app.use(pageRouter.routes()).use(pageRouter.allowedMethods());
 
-app.listen(serverConfig.port, function () {
+
+console.log(process.env.HOST, process.env.PORT)
+
+const HOST = process.env.HOST || serverConfig.host; //定义服务ip
+const PORT = process.env.PORT || serverConfig.port; //定义服务端口
+
+
+
+app.listen(PORT, HOST, function () {
   console.log('端口已开启')
 })

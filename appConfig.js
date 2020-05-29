@@ -7,6 +7,7 @@ module.exports = {
     clientDistDir:path.resolve(__dirname, './public')
   },
   server:{
+    host:"127.0.0.1",
     port: 3000
   }
 }
