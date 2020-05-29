@@ -1,12 +1,11 @@
-<template>
-  <div>
-    <img src="../assets/logo.png" alt="">
-  </div>
-</template>
-
 <script>
   export default {
-    name: "Index"
+    name: "Index",
+    render(h) {
+      return (
+              <div><img src={require("../assets/logo.png")}/></div>
+      )
+    }
   }
 </script>
 
